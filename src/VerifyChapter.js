@@ -9,7 +9,6 @@ function VerifyChapter() {
   const [urls, setUrls] = useState([]);
 
   const verifyPage = async (urlPage) => {
-    console.log('urlPage', urlPage)
     return fetch(`http://localhost:3000/verificarPagina?url=${encodeURIComponent(urlPage)}`)
       .then(response => {
         if (response.status === 200) {
@@ -32,12 +31,10 @@ function VerifyChapter() {
     let pageVefiry = false
 
     do {
-      console.log('lastPage', lastPage)
       const urlPage = url.replace('%page%', lastPage)
       pageVefiry = await verifyPage(urlPage)
       lastPage = pageVefiry ? parseFloat(lastPage) + 1 : parseFloat(lastPage) - 1
       if (pageVefiry) {
-        console.log('Adicionando URL NOVA')
         setUrls((prevUrls) => [...prevUrls, urlPage]);
       }
     } while (pageVefiry)
