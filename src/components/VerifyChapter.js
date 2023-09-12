@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import styles from '../styles/VerifyChapter.module.css'
+const BASE_URL = "https://comic-api-three.vercel.app/"
 
 function VerifyChapter() {
   const [url, setUrl] = useState('');
@@ -9,7 +11,7 @@ function VerifyChapter() {
   const [urls, setUrls] = useState([]);
 
   const verifyPage = async (urlPage) => {
-    return fetch(`http://localhost:3000/verificarPagina?url=${encodeURIComponent(urlPage)}`)
+    return fetch(`${BASE_URL}/verificarPagina?url=${encodeURIComponent(urlPage)}`)
       .then(response => {
         if (response.status === 200) {
           return true
@@ -51,7 +53,7 @@ function VerifyChapter() {
 
   return (
     <div>
-      <h1>Verificador de capitulo</h1>
+      <h1 className={styles.tittleVerify}>Verificador de capitulo</h1>
       <div>
         <label>URL da Página:</label>
         <input type="text" value={url} onChange={(e) => setUrl(e.target.value)} />

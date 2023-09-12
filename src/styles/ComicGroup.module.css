@@ -1,0 +1,9 @@
+.group {
+  min-height: 60px;
+  background-color: #245697;
+  box-shadow: 0px 15px 20px #1c1c1c45;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

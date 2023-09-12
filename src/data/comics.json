@@ -1,0 +1,30 @@
+[
+    {
+        "folderName": "Favoritos",
+        "comicsList": [
+            {
+                "name": "Matial Peak",
+                "url": "https://guimah.com/leitor/TE5MN3pZOGRCNVQ3cEg2U0FQaWd4YVZWb3c9PQ==/%page%",
+                "currentPage": 3495,
+                "lastPage": 3497
+            },
+            {
+                "name": "Matial Peak",
+                "url": "https://guimah.com/leitor/TE5MN3pZOGRCNVQ3cEg2U0FQaWd4YVZWb3c9PQ==/%page%",
+                "currentPage": 3496,
+                "lastPage": 3497
+            }
+        ]
+    },
+    {
+        "folderName": "Pouco atualizados",
+        "comicsList": [
+            {
+                "name": "Matial Peak",
+                "url": "https://guimah.com/leitor/TE5MN3pZOGRCNVQ3cEg2U0FQaWd4YVZWb3c9PQ==/%page%",
+                "currentPage": 3497,
+                "lastPage": 3497
+            }
+        ]
+    }
+]
