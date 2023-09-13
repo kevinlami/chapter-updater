@@ -10,7 +10,7 @@ function VerifyChapter() {
   const [resultado, setResultado] = useState('');
   const [urls, setUrls] = useState([]);
 
-  fetch(`https://comic-api-three.vercel.app/verificarPagina?url=https%3A%2F%2Fguimah.com%2Fleitor%2FTE5MN3pZOGRCNVQ3cEg2U0FQaWd4YVZWb3c9PQ%3D%3D%2F3496`)
+  fetch(`https://comic-api-three.vercel.app/verificarPagina?url=https://guimah.com/leitor/TE5MN3pZOGRCNVQ3cEg2U0FQaWd4YVZWb3c9PQ==/3496`)
       .then(response => {
         if (response.status === 200) {
           console.log("PASSOU")
@@ -23,7 +23,7 @@ function VerifyChapter() {
 }) 
 
   const verifyPage = async (urlPage) => {
-    return fetch(`${BASE_URL}/verificarPagina?url=${encodeURIComponent(urlPage)}`)
+    return fetch(`${BASE_URL}/verificarPagina?url=${urlPage}`)
       .then(response => {
         if (response.status === 200) {
           return true
