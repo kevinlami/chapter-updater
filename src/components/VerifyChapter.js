@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../styles/VerifyChapter.module.css'
-const BASE_URL = "https://comic-api-three.vercel.app/"
+const BASE_URL = "https://comic-api-three.vercel.app"
 
 function VerifyChapter() {
   const [url, setUrl] = useState('');
@@ -9,18 +9,6 @@ function VerifyChapter() {
   const [lastChapter, setLastChapter] = useState('');
   const [resultado, setResultado] = useState('');
   const [urls, setUrls] = useState([]);
-
-  fetch(`https://comic-api-three.vercel.app/verificarPagina?url=https://guimah.com/leitor/TE5MN3pZOGRCNVQ3cEg2U0FQaWd4YVZWb3c9PQ==/3496`)
-      .then(response => {
-        if (response.status === 200) {
-          console.log("PASSOU")
-        } else if (response.status === 404) {
-          console.log("404")
-        } else {
-          console.error("Erro ao verificar a página.", response);
-          console.log("Erro fatal")
-        }
-}) 
 
   const verifyPage = async (urlPage) => {
     return fetch(`${BASE_URL}/verificarPagina?url=${urlPage}`)
